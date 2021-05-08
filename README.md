@@ -7,4 +7,4 @@ Things I learned as a software engineer at Saleshandy https://www.saleshandy.com
 - Database access calls should never be in loop ( if possible ).
 - To Count with IF condition in MySQL
    round(COUNT(IF( lastOpenedAt <> '0000-00-00 00:00:00', 1, NULL))/COUNT(*) * 100) as 'open',
-
+- Local tunnel to create callback url for testing.
