@@ -8,3 +8,10 @@ Things I learned as a software engineer at Saleshandy https://www.saleshandy.com
 - To Count with IF condition in MySQL
    round(COUNT(IF( lastOpenedAt <> '0000-00-00 00:00:00', 1, NULL))/COUNT(*) * 100) as 'open',
 - Local tunnel to create callback url for testing.
+- contact.sequenceContactHistory.forEach((sch, index) => {
+          if (!sch.step || !sch.step.sequence) {
+            contact.sequenceContactHistory.splice(index, 1);
+          }
+ });
+   // above code has a loop hole, that is, if we are doing forEach and we are calling splice it changes array length but because array length was initially cached the indexing gets disturbed. 
+   // Solution: reverse for loop
