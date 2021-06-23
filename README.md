@@ -15,3 +15,4 @@ Things I learned as a software engineer at Saleshandy https://www.saleshandy.com
  });
    // above code has a loop hole, that is, if we are doing forEach and we are calling splice it changes array length but because array length was initially cached the indexing gets disturbed. 
    // Solution: reverse for loop
+- Object.freeze()
